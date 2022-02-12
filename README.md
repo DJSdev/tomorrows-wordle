@@ -1,7 +1,7 @@
-# Solve today's Wordle and know all the Wordle for Tomorrow and forever
+# Know all the Wordles
 
 ```
-// Use today's date by default (for example today is 2/12/2022)
+// Today
 node solve-wordle.js
 > ultra
 ```
@@ -9,7 +9,7 @@ node solve-wordle.js
 or to solve for a different date
 
 ```
-// Use tomorrow's date
+// Tomorrow
 node solve-wordle.js 2/13/2022
 > robin
 ```
