@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.b1950aad.js",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.b1950aad.js.map": "/static/js/main.b1950aad.js.map"
+    "main.css": "tomorrows-wordle/static/css/main.073c9b0a.css",
+    "main.js": "tomorrows-wordle/static/js/main.b1950aad.js",
+    "index.html": "tomorrows-wordle/index.html",
+    "main.073c9b0a.css.map": "tomorrows-wordle/static/css/main.073c9b0a.css.map",
+    "main.b1950aad.js.map": "tomorrows-wordle/static/js/main.b1950aad.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
