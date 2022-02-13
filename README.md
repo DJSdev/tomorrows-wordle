@@ -18,4 +18,4 @@ node solve-wordle.js 2/13/2022
 
 ## Build Docs
 
-`BUILD_PATH='../../docs' npm run build`
+`PUBLIC_URL=tomorrows-wordle/  BUILD_PATH='../../docs' npm run build`
