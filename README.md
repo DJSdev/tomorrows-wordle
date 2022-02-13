@@ -1,5 +1,10 @@
 # Know all the Wordles
 
+## Website
+
+[Github Pages site for figuring out what the word of the day is](https://djsdev.github.io/tomorrows-wordle/)
+
+## As a Library
 ```
 // Today
 node solve-wordle.js
