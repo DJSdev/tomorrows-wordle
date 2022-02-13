@@ -17,16 +17,18 @@ const App = () => {
 
   return (
     <div className="App-header">
-      <h1> Tomorrow's Wordle </h1>
+      <h1 id='title'> Tomorrow's Wordle </h1>
+      <div id='content'>
+        <div id='select'> Select date for past and future words </div>
+        <input
+          id="datePicker"
+          type="date"
+          value={inputDate}
+          onChange={onChangeDate}
+        />
+      </div>
 
-      <input
-        id="datePicker"
-        type="date"
-        value={inputDate}
-        onChange={onChangeDate}
-      />
-
-      <h3>{getSolution(DateTime.fromISO(inputDate).toFormat("MM/dd/yyyy"))}</h3>
+      <h3 id='word'>{getSolution(DateTime.fromISO(inputDate).toFormat("MM/dd/yyyy"))}</h3>
     </div>
   );
 };
