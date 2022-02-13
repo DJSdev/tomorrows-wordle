@@ -1,0 +1,36 @@
+{
+  "name": "tomorrows-wordle",
+  "version": "1.0.0",
+  "description": "```\r // Today\r node solve-wordle.js\r > ultra\r ```",
+  "main": "main.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "main": "ts-node main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJSdev/tomorrows-wordle.git"
+  },
+  "keywords": [
+    "wordle",
+    "tomorrow",
+    "today",
+    "word",
+    "words"
+  ],
+  "author": "DJSdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DJSdev/tomorrows-wordle/issues"
+  },
+  "homepage": "https://github.com/DJSdev/tomorrows-wordle#readme",
+  "dependencies": {
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {}
+}

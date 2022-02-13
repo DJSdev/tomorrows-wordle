@@ -15,3 +15,7 @@ node solve-wordle.js 2/13/2022
 ```
 
 ![solve-wordle.js](./assets/nodesolvewordle.gif)
+
+## Build Docs
+
+`BUILD_PATH='../../docs' npm run build`
