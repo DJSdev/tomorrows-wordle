@@ -33,17 +33,17 @@ const App = () => {
       </h3>
 
       <div id="socials">
-      <a href="https://twitter.com/dylanschlabach">
-        <span id="twitter" className="social">
-          <img src="twitter.png" width="32px" />
-          Twitter
-        </span>
+        <a href="https://twitter.com/dylanschlabach" target="_blank">
+          <span id="twitter" className="social">
+            <img src="twitter.png" width="32px" />
+            Twitter
+          </span>
         </a>
-        <a href="https://github.com/DJSdev/tomorrows-wordle">
-        <span id="github" className="social">
-          <img src="github.png" width="32px" />
-          Github
-        </span>
+        <a href="https://github.com/DJSdev/tomorrows-wordle" target="_blank">
+          <span id="github" className="social">
+            <img src="github.png" width="32px"/>
+            Github
+          </span>
         </a>
       </div>
     </div>
