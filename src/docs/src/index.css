@@ -7,9 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div#app {
+
 }
 
 div#content {
@@ -20,6 +19,34 @@ div#select {
   margin-bottom: 5%;
 }
 
+div#socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+a span.social {
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border-color: azure;
+  border-radius: 25px;
+  border-width: 1px;
+  padding: 20px; 
+  margin: 10px
+}
+
+a {
+  color:#ffffff;
+  padding: 1ch;
+  text-decoration: none; 
+}
+
+span.social img {
+ padding: 10px;
+}
+
 input {
   font-size: 2rem;
 }
+

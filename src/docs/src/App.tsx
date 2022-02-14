@@ -16,10 +16,10 @@ const App = () => {
   };
 
   return (
-    <div className="App-header">
-      <h1 id='title'> Tomorrow's Wordle </h1>
-      <div id='content'>
-        <div id='select'> Select date for past and future words </div>
+    <div className="app">
+      <h1 id="title"> Tomorrow's Wordle </h1>
+      <div id="content">
+        <div id="select"> Select date for past and future words </div>
         <input
           id="datePicker"
           type="date"
@@ -28,7 +28,24 @@ const App = () => {
         />
       </div>
 
-      <h3 id='word'>{getSolution(DateTime.fromISO(inputDate).toFormat("MM/dd/yyyy"))}</h3>
+      <h3 id="word">
+        {getSolution(DateTime.fromISO(inputDate).toFormat("MM/dd/yyyy"))}
+      </h3>
+
+      <div id="socials">
+      <a href="https://twitter.com/dylanschlabach">
+        <span id="twitter" className="social">
+          <img src="twitter.png" width="32px" />
+          Twitter
+        </span>
+        </a>
+        <a href="https://github.com/DJSdev/tomorrows-wordle">
+        <span id="github" className="social">
+          <img src="github.png" width="32px" />
+          Github
+        </span>
+        </a>
+      </div>
     </div>
   );
 };
