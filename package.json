@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "build": "npm run build:lib && npm run build:docs",
+    "build:lib": "tsc",
+    "build:docs": "cd src/docs && set PUBLIC_URL=./ && set BUILD_PATH='../../docs' && npm run build",
     "main": "ts-node main.ts"
   },
   "repository": {
@@ -31,6 +33,5 @@
   "dependencies": {
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
-  },
-  "devDependencies": {}
+  }
 }
