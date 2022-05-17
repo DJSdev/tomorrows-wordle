@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import { DateTime } from "luxon";
+
+// symlink in node_modules resolves wordle/solve-wordle to ./dist/lib/solve-wordle
 import { getSolution } from "wordle/solve-wordle";
 
 const App = () => {
