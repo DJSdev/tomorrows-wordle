@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { DateTime } from "luxon";
+import Axios, { AxiosError, AxiosResponse } from "axios";
 
-// symlink in node_modules resolves wordle/solve-wordle to ./dist/lib/solve-wordle
-import { getSolution } from "wordle/solve-wordle";
+import { getSolution, getSolutionNetwork } from './lib/solve-wordle';
+
+
 
 const App = () => {
   const [inputDate, setDate] = useState(
     DateTime.now().plus({ day: 1 }).toISO().split("T")[0]
   );
 
+  const [solution, setSolution] = useState('');;
+
   const onChangeDate = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newInputDate = DateTime.fromISO(event.target.value).toFormat(
-      "yyyy-MM-dd"
-    );
+    const newInputDate = DateTime.fromISO(event.target.value).toFormat('yyyy-MM-dd');
     setDate(newInputDate);
   };
+
+  useEffect(() => {
+    getSolutionNetwork(inputDate, setSolution);
+  });
 
   return (
     <div className="app">
@@ -31,7 +37,7 @@ const App = () => {
       </div>
 
       <h3 id="word">
-        {getSolution(DateTime.fromISO(inputDate).toFormat("MM/dd/yyyy"))}
+        {solution}
       </h3>
 
       <div id="socials">
