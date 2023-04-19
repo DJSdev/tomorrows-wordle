@@ -1,11 +1,12 @@
 import Axios from "axios";
+import env from '../env/env.json';
 
 interface WordleResponse {
   solution: string;
 }
 
 export async function getSolutionNetwork(inputDate: string, setSolutionFunc: React.Dispatch<React.SetStateAction<string>>): Promise<void> {
-  const url = `${ process.env.DEV_URL ?? 'https://todays-wordle-backend.onrender.com' }/wordle`
+  const url = `${ env.API_URL }/wordle`
   try {
     setSolutionFunc((await Axios.get<WordleResponse>(url, { params: { date: inputDate } })).data.solution);
   } catch (e) {

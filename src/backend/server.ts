@@ -15,6 +15,8 @@ const corsOptions: CorsOptions  = {
   optionsSuccessStatus: 200
 }
 
+console.log('Cors options:', corsOptions)
+
 const app = express();
 
 interface WordleParams {
