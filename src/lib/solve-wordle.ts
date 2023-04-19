@@ -5,7 +5,7 @@ interface WordleResponse {
 }
 
 export async function getSolutionNetwork(inputDate: string, setSolutionFunc: React.Dispatch<React.SetStateAction<string>>): Promise<void> {
-  const url = 'http://localhost/wordle'
+  const url = process.env.WORDLE_PROD ? 'https://todays-wordle-backend.onrender.com' : 'http://localhost/wordle';
   try {
     setSolutionFunc((await Axios.get<WordleResponse>(url, { params: { date: inputDate } })).data.solution);
   } catch (e) {

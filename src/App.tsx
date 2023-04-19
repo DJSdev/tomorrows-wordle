@@ -40,7 +40,7 @@ const App = () => {
       </div>
 
       <h3 id="word">
-        {solution}
+        {solution !== '' ? solution : 'Retrieving today\'s word...'}
       </h3>
 
       <div id="socials">
