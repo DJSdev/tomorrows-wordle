@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { DateTime } from "luxon";
-import Axios, { AxiosError, AxiosResponse } from "axios";
-
-import { getSolution, getSolutionNetwork } from './lib/solve-wordle';
-
-
+import { getSolutionNetwork } from './lib/solve-wordle';
 
 const App = () => {
   const [inputDate, setDate] = useState(
-    DateTime.now().plus({ day: 1 }).toISO().split("T")[0]
+    DateTime.now().toISO().split("T")[0]
   );
 
   const [solution, setSolution] = useState('');;
@@ -23,9 +19,14 @@ const App = () => {
     getSolutionNetwork(inputDate, setSolution);
   });
 
+  const addThirtyDays = (date: Date) => {
+    date.setDate(date.getDate() + 30);
+    return date;
+  }
+
   return (
     <div className="app">
-      <h1 id="title"> Tomorrow's Wordle </h1>
+      <h1 id="title"> Today's Wordle </h1>
       <div id="content">
         <div id="select"> Select date for past and future words </div>
         <input
@@ -33,6 +34,8 @@ const App = () => {
           type="date"
           value={inputDate}
           onChange={onChangeDate}
+          min='2021-06-21' // First day available on NYT API
+          max={DateTime.fromJSDate(addThirtyDays(new Date())).toFormat('yyyy-MM-dd')}
         />
       </div>
 

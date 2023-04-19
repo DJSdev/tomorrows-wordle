@@ -8,3 +8,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+#datePicker {
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 3px 5px;
+  width: 100%;
+}

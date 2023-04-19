@@ -1,0 +1,18 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "target": "ES2022",
+    "strict": true,
+    "module": "CommonJS",
+    "outDir": "../../dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "files": ["./server.ts"]
+}
