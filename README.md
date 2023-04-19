@@ -7,8 +7,12 @@
 ## 🏦 Start Locally
 
 ```sh
-npm run build
+npm run start:dev
 ```
+
+## Deployed
+
+Currently deployed on [Render](https://render.com/)
 
 ## .env
 
