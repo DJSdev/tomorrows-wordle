@@ -11,7 +11,7 @@ const port = process.env.WORDLE_PORT ? Number.parseInt(process.env.WORDLE_PORT) 
 const hostname = process.env.WORDLE_HOSTNAME ?? '0.0.0.0';
 
 const corsOptions: CorsOptions  = {
-  origin: process.env.DEV_URL ?? 'https://todays-wordle-backend.onrender.com',
+  origin: process.env.DEV_URL ?? 'https://todays-wordle-frontend.onrender.com',
   optionsSuccessStatus: 200
 }
 
