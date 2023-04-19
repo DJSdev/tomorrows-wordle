@@ -2,7 +2,7 @@
 
 ## Website
 
-📝 Today's  Wordle - https://djsdev.github.io/tomorrows-wordle/
+📝 Today's  Wordle - https://todays-wordle-frontend.onrender.com
 
 ## 🏦 Start Locally
 
