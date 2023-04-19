@@ -3,11 +3,17 @@ import Axios from "axios";
 import { DateTime } from "luxon";
 import { v4 as uuid } from 'uuid';
 import dotenv from 'dotenv';
+import cors, { CorsOptions } from 'cors';
 
 dotenv.config();
 
 const port = process.env.WORDLE_PORT ? Number.parseInt(process.env.WORDLE_PORT) : 8080;
 const hostname = process.env.WORDLE_HOSTNAME ?? '0.0.0.0';
+
+const corsOptions: CorsOptions  = {
+  origin: process.env.DEV_URL ?? 'https://todays-wordle-backend.onrender.com',
+  optionsSuccessStatus: 200
+}
 
 const app = express();
 
@@ -46,6 +52,7 @@ app.use((req: Request<{}, any, WordleBody, WordleParams>, res: Response, next: e
 
 app.get(
   "/wordle",
+  cors(corsOptions),
   asyncHandler(
     async (
       req: Request<{}, any, any, WordleParams>,
@@ -76,7 +83,7 @@ app.get(
   )
 );
 
-app.use(function (req: Request<{}, any, WordleBody, WordleParams>, res: Response) {
+app.use(function (req: Request<{}, any, any, any>, res: Response) {
   log(req);
   res.status(404).send("Not found");
   log(req, res);
