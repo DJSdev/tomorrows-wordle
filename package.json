@@ -23,7 +23,7 @@
     "start:dev:frontend": "react-scripts start",
     "start:dev:backend": "nodemon ./src/backend/server.ts",
     "start:prod:backend": "node ./dist/server.js",
-    "build:frontend": "export PUBLIC_URL=./ && export BUILD_PATH=./docs && react-scripts build",
+    "build:frontend": "export PUBLIC_URL=./ && react-scripts build",
     "build:backend": "tsc -p ./src/backend/tsconfig.json",
     "renderer:build": "npm install && npm run build:backend",
     "test": "react-scripts test",
